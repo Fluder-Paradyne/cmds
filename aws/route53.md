@@ -1,0 +1,1 @@
+aws route53 list-resource-record-sets --hosted-zone-id <zone-id> > hosted_zone_records.json
