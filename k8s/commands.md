@@ -18,6 +18,9 @@ kubectl get pods --field-selector=status.phase=Failed -o name | xargs -P 10 -n 1
 
 
 Delete all failed pods across all namespaces
+
+### (for completed status is Succeeded)
+
 ```shell
 kubectl get pods --all-namespaces --field-selector=status.phase=Failed -o custom-columns=NAME:.metadata.name,NAMESPACE:.metadata.namespace --no-headers | \
 awk '{print $2, $1}' | \
