@@ -26,3 +26,10 @@ kubectl get pods --all-namespaces --field-selector=status.phase=Failed -o custom
 awk '{print $2, $1}' | \
 xargs -P 10 -n 2 sh -c 'kubectl delete pod $1 -n $0'
 ```
+
+
+### Search for a string in config map
+
+```shell
+for cm in $(kubectl get configmap -o name); do   echo "--- Processing $cm ---";   kubectl get "$cm" -o yaml | grep -q 'test string' && echo "Found 'AKIAYX2ZQI577ABR6GSM' in $cm"; done
+```
