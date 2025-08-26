@@ -33,3 +33,12 @@ xargs -P 10 -n 2 sh -c 'kubectl delete pod $1 -n $0'
 ```shell
 for cm in $(kubectl get configmap -o name); do   echo "--- Processing $cm ---";   kubectl get "$cm" -o yaml | grep -q 'test string' && echo "Found 'AKIAYX2ZQI577ABR6GSM' in $cm"; done
 ```
+
+### Get all the envs set while masking values, also skips some service/k8s related envs
+```shell
+kubectl -n super-crm-staging exec -it <pod-name> -- printenv \
+  | tr -d '\r' \
+  | grep -vE '(_TCP_PROTO=|_TCP=|_PORT_HTTP=|_TCP_ADDR=|_TCP_PORT=|_HOST=|_PORT=)' \
+  | sed 's/=.*/=****/' \
+  | sort
+```
