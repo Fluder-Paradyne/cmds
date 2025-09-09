@@ -42,3 +42,8 @@ kubectl -n super-crm-staging exec -it <pod-name> -- printenv \
   | sed 's/=.*/=****/' \
   | sort
 ```
+
+### Get PVC usage 
+```shell
+kubectl df-pv -n <namespace>
+```
