@@ -47,3 +47,8 @@ kubectl -n super-crm-staging exec -it <pod-name> -- printenv \
 ```shell
 kubectl df-pv -n <namespace>
 ```
+
+### Get HaProxy config
+```shell
+kubectl exec -nhaproxy haproxy-ingress-kubernetes-ingress-7d8598b786-2zms2 -- cat /etc/haproxy/haproxy.cfg
+```
