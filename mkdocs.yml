@@ -1,0 +1,90 @@
+site_name: Command Reference
+site_description: A collection of useful commands and scripts
+site_author: Your Name
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - AWS:
+      - IAM: aws/iam.md
+      - Route53: aws/route53.md
+      - SOC2: aws/SOC2.md
+      - Links: aws/links.md
+  - Docker:
+      - Commands: docker/commands.md
+      - Vue3 Dockerfile: docker/vue3.Dockerfile
+  - Kubernetes:
+      - Commands: k8s/commands.md
+  - Databases:
+      - MySQL: databases/msql.md
+      - PostgreSQL: psql/scripts.md
+  - Jenkins:
+      - Jenkins: jenkins/jenkins.md
+  - Linux:
+      - Utilities: linux/utils.md
+  - Ruby:
+      - Sidekiq: ruby/sidekiq.md
+  - Java:
+      - Gradle: java/gradle.md
+  - OpenSearch:
+      - Plugin: opensearch/plugin.md
+  - SSH:
+      - SSH: ssh/ssh.md
+  - GitHub:
+      - Links: links/github.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com
+
