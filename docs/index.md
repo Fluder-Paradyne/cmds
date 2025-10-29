@@ -22,14 +22,5 @@ Use the navigation menu on the left to browse different categories:
 
 Use the search bar at the top to quickly find any command or topic. The search is powered by MkDocs and indexes all content across the site.
 
-## Quick Tips
-
-- Use `Ctrl+K` (or `Cmd+K` on Mac) to quickly access the search
-- Toggle between light and dark mode using the icon in the top right
-- Click the copy button in code blocks to quickly copy commands
-- All pages are printable and can be bookmarked
-
----
-
 Start exploring by selecting a topic from the navigation menu!
 
