@@ -69,3 +69,11 @@ kubectl cordon <node-name>
 ```shell
 kubectl drain <node-name> --ignore-daemonsets --delete-emptydir-data
 ```
+
+### Get node + number of pods in them
+```shell
+kubectl get pods -A -o json | jq -r '
+  [.items[] | .spec.nodeName] | group_by(.)[] |
+  "\(.[0]) → \(. | length) pods"
+'
+```
