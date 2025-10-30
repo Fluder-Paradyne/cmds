@@ -52,3 +52,20 @@ kubectl df-pv -n <namespace>
 ```shell
 kubectl exec -nhaproxy haproxy-ingress-kubernetes-ingress-7d8598b786-2zms2 -- cat /etc/haproxy/haproxy.cfg
 ```
+
+### Force remove nodes stuck in NotReady or Terminating state
+```shell
+for node in $(kubectl get nodes --no-headers | awk '$2=="NotReady" || $2=="Terminating"{print $1}'); do
+  kubectl patch node "$node" -p '{"metadata":{"finalizers":[]}}' --type=merge
+done
+```
+
+### Cordon node
+```shell
+kubectl cordon <node-name>
+```
+
+### Drain a particular node
+```shell
+kubectl drain <node-name> --ignore-daemonsets --delete-emptydir-data
+```
