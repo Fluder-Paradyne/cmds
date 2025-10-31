@@ -43,7 +43,7 @@ kubectl -n super-crm-staging exec -it <pod-name> -- printenv \
   | sort
 ```
 
-### Get PVC usage 
+### Get PVC usage (install plugin from [https://github.com/yashbhutwala/kubectl-df-pv](https://github.com/yashbhutwala/kubectl-df-pv))
 ```shell
 kubectl df-pv -n <namespace>
 ```
