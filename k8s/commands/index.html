@@ -925,6 +925,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#get-spark-application-status-counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Spark application status counts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Spark application status counts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      example output:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1653,6 +1677,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#get-spark-application-status-counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Spark application status counts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Spark application status counts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      example output:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1721,6 +1769,15 @@
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="s1">  [.items[] | .spec.nodeName] | group_by(.)[] |</span>
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="s1">  &quot;\(.[0]) → \(. | length) pods&quot;</span>
 </span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="s1">&#39;</span>
+</span></code></pre></div>
+<h3 id="get-spark-application-status-counts">Get Spark application status counts<a class="headerlink" href="#get-spark-application-status-counts" title="Permanent link">&para;</a></h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>sparkapplication<span class="w"> </span>-n<span class="w"> </span>spark-apps<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>staging<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $2}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c
+</span></code></pre></div>
+<h4 id="example-output">example output:<a class="headerlink" href="#example-output" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>   7 PENDING_RERUN
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a> 134 RUNNING
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>   1 SUBMISSION_FAILED
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>   1 SUBMITTED
 </span></code></pre></div>
 
 
