@@ -77,3 +77,15 @@ kubectl get pods -A -o json | jq -r '
   "\(.[0]) → \(. | length) pods"
 '
 ```
+
+### Get Spark application status counts
+```shell
+kubectl get sparkapplication -n spark-apps | grep staging | awk '{print $2}' | sort | uniq -c
+```
+#### example output:
+```
+   7 PENDING_RERUN
+ 134 RUNNING
+   1 SUBMISSION_FAILED
+   1 SUBMITTED
+```
