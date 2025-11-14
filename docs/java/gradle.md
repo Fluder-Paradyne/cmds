@@ -9,6 +9,7 @@ docker run --rm -v "$(pwd)":/home/gradle/project -w /home/gradle/project public.
 ```
 
 ### build trino docker image
+#### have to do this after the above cmd
 ```shell
 ./core/docker/build.sh -a arm64
 ```
