@@ -1241,6 +1241,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#completely-build-trino" class="md-nav__link">
+    <span class="md-ellipsis">
+      Completely build trino
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1509,6 +1518,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#completely-build-trino" class="md-nav__link">
+    <span class="md-ellipsis">
+      Completely build trino
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1529,6 +1547,9 @@
 
 <h3 id="run-gradle-commands-using-docker">Run gradle commands using docker<a class="headerlink" href="#run-gradle-commands-using-docker" title="Permanent link">&para;</a></h3>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">&quot;</span>:/home/gradle/project<span class="w"> </span>-w<span class="w"> </span>/home/gradle/project<span class="w"> </span>public.ecr.aws/docker/library/gradle:jdk17-jammy<span class="w"> </span>gradle<span class="w"> </span>dependencyUpdates
+</span></code></pre></div>
+<h3 id="completely-build-trino">Completely build trino<a class="headerlink" href="#completely-build-trino" title="Permanent link">&para;</a></h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./mvnw<span class="w"> </span>clean<span class="w"> </span>install<span class="w"> </span>-pl<span class="w"> </span>plugin/trino-hudi<span class="w"> </span>-am<span class="w"> </span>-Dmaven.test.skip<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-Dair.check.skip-all<span class="o">=</span><span class="nb">true</span>
 </span></code></pre></div>
 
 
