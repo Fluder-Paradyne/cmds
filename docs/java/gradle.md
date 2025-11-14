@@ -7,3 +7,8 @@ docker run --rm -v "$(pwd)":/home/gradle/project -w /home/gradle/project public.
 ```shell
 ./mvnw clean install -pl plugin/trino-hudi -am -Dmaven.test.skip=true -Dair.check.skip-all=true
 ```
+
+### build trino docker image
+```shell
+./core/docker/build.sh -a arm64
+```
