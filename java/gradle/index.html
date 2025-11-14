@@ -1250,6 +1250,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#build-trino-docker-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      build trino docker image
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1527,6 +1536,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#build-trino-docker-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      build trino docker image
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1550,6 +1568,9 @@
 </span></code></pre></div>
 <h3 id="completely-build-trino">Completely build trino<a class="headerlink" href="#completely-build-trino" title="Permanent link">&para;</a></h3>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./mvnw<span class="w"> </span>clean<span class="w"> </span>install<span class="w"> </span>-pl<span class="w"> </span>plugin/trino-hudi<span class="w"> </span>-am<span class="w"> </span>-Dmaven.test.skip<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-Dair.check.skip-all<span class="o">=</span><span class="nb">true</span>
+</span></code></pre></div>
+<h3 id="build-trino-docker-image">build trino docker image<a class="headerlink" href="#build-trino-docker-image" title="Permanent link">&para;</a></h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./core/docker/build.sh<span class="w"> </span>-a<span class="w"> </span>arm64
 </span></code></pre></div>
 
 
