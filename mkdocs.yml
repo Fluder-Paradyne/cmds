@@ -69,6 +69,8 @@ nav:
   - Databases:
       - MySQL: databases/msql.md
       - PostgreSQL: databases/psql.md
+  - Flink:
+      - Hive: flink/hive.md
   - Jenkins:
       - Jenkins: jenkins/jenkins.md
   - Linux:
