@@ -68,7 +68,7 @@ nav:
       - Commands: k8s/commands.md
   - Databases:
       - MySQL: databases/msql.md
-      - PostgreSQL: psql/scripts.md
+      - PostgreSQL: databases/psql.md
   - Jenkins:
       - Jenkins: jenkins/jenkins.md
   - Linux:
