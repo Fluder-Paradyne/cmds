@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#run-postgresql-schema-inference-tests" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1524,6 +1529,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#run-postgresql-schema-inference-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run PostgreSQL schema inference tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-debezium-deserialization-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Debezium deserialization tests
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1553,6 +1584,14 @@
 <p>build for 3.5.0
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mvn<span class="w"> </span>clean<span class="w"> </span>install<span class="w"> </span>-DskipTests<span class="w"> </span>-Drat.skip<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-Drevision<span class="o">=</span><span class="m">3</span>.5.0<span class="w"> </span>-pl<span class="w"> </span>flink-cdc-connect/flink-cdc-source-connectors/flink-connector-debezium,flink-cdc-connect/flink-cdc-pipeline-connectors/flink-cdc-pipeline-connector-postgres<span class="w"> </span>-am
 </span></code></pre></div></p>
+<h3 id="run-postgresql-schema-inference-tests">Run PostgreSQL schema inference tests<a class="headerlink" href="#run-postgresql-schema-inference-tests" title="Permanent link">&para;</a></h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mvn<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-Dtest<span class="o">=</span>PostgresSchemaDataTypeInferenceTest<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span>-pl<span class="w"> </span>flink-cdc-connect/flink-cdc-pipeline-connectors/flink-cdc-pipeline-connector-postgres
+</span></code></pre></div>
+<h3 id="run-debezium-deserialization-tests">Run Debezium deserialization tests<a class="headerlink" href="#run-debezium-deserialization-tests" title="Permanent link">&para;</a></h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>mvn<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-Dtest<span class="o">=</span>DebeziumEventDeserializationSchemaTest<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span>-pl<span class="w"> </span>flink-cdc-connect/flink-cdc-source-connectors/flink-connector-debezium
+</span></code></pre></div>
 
 
 
