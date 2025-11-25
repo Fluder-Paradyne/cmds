@@ -23,3 +23,16 @@ build for 3.5.0
 ```shell
 mvn clean install -DskipTests -Drat.skip=true -Drevision=3.5.0 -pl flink-cdc-connect/flink-cdc-source-connectors/flink-connector-debezium,flink-cdc-connect/flink-cdc-pipeline-connectors/flink-cdc-pipeline-connector-postgres -am
 ```
+
+### Run PostgreSQL schema inference tests
+```shell
+mvn test -Dtest=PostgresSchemaDataTypeInferenceTest \
+  -pl flink-cdc-connect/flink-cdc-pipeline-connectors/flink-cdc-pipeline-connector-postgres
+```
+
+
+### Run Debezium deserialization tests
+```shell
+mvn test -Dtest=DebeziumEventDeserializationSchemaTest \
+  -pl flink-cdc-connect/flink-cdc-source-connectors/flink-connector-debezium
+```
