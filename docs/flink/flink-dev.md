@@ -13,3 +13,7 @@ cd flink-cdc/flink-cdc-cli && mvn clean install -DskipTests -Drevision=3.5.0 -Ds
 ```shell
 ./bin/flink-cdc.sh psql_to_star.yaml --flink-home ~/IdeaProjects/flink-1.20.3
 ```
+
+```shell
+mvn clean install -DskipTests -Drat.skip=true -pl flink-cdc-connect/flink-cdc-source-connectors/flink-connector-debezium,flink-cdc-connect/flink-cdc-pipeline-connectors/flink-cdc-pipeline-connector-postgres -am
+```
