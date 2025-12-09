@@ -1405,6 +1405,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Commands to start opensearch dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-when-opensearch-certificates-are-going-to-expire" class="md-nav__link">
+    <span class="md-ellipsis">
+      check when opensearch certificates are going to expire
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1600,6 +1615,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Commands to start opensearch dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-when-opensearch-certificates-are-going-to-expire" class="md-nav__link">
+    <span class="md-ellipsis">
+      check when opensearch certificates are going to expire
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1624,6 +1654,9 @@
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>nvm<span class="w"> </span>use<span class="w"> </span><span class="m">20</span>.18.3
 </span></code></pre></div>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>yarn<span class="w"> </span>start<span class="w"> </span>--no-base-path<span class="w"> </span>
+</span></code></pre></div>
+<h4 id="check-when-opensearch-certificates-are-going-to-expire">check when opensearch certificates are going to expire<a class="headerlink" href="#check-when-opensearch-certificates-are-going-to-expire" title="Permanent link">&para;</a></h4>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== OpenSearch Certificate Expiration Dates ===&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>cluster<span class="w"> </span><span class="k">in</span><span class="w"> </span>logs<span class="w"> </span>emails<span class="w"> </span>crm-v2<span class="w"> </span>crm-staging<span class="w"> </span>prospect<span class="w"> </span>tasks<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[</span><span class="nv">$cluster</span><span class="s2">]&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span><span class="si">${</span><span class="nv">cluster</span><span class="si">}</span>-http-cert<span class="w"> </span>-n<span class="w"> </span>opensearch<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.tls\.crt}&#39;</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d<span class="w"> </span><span class="p">|</span><span class="w"> </span>openssl<span class="w"> </span>x509<span class="w"> </span>-noout<span class="w"> </span>-enddate<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/notAfter=/  Expires: /&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
 </span></code></pre></div>
 
 
