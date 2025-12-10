@@ -89,3 +89,8 @@ kubectl get sparkapplication -n spark-apps | grep staging | awk '{print $2}' | s
    1 SUBMISSION_FAILED
    1 SUBMITTED
 ```
+
+#### Get kafka connect logs
+```shell
+kubectl logs -f -nkafka -l app.kubernetes.io/name=kafka-connect
+```
