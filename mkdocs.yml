@@ -85,7 +85,8 @@ nav:
       - SSH: ssh/ssh.md
   - GitHub:
       - Links: links/github.md
-
+  - Kafka:
+      - Commands: kafka/commands.md
 extra:
   social:
     - icon: fontawesome/brands/github
