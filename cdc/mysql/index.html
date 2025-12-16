@@ -13,10 +13,8 @@
       
       
       
-        <link rel="prev" href="../../docker/vue3.Dockerfile">
+        <link rel="prev" href="../../kafka/commands/">
       
-      
-        <link rel="next" href="../../databases/msql/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +22,7 @@
     
     
       
-        <title>Commands - Command Reference</title>
+        <title>MySQL - Command Reference</title>
       
     
     
@@ -75,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#for-completed-status-is-succeeded" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -110,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Commands
+              MySQL
             
           </span>
         </div>
@@ -273,13 +266,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../k8s/commands/" class="md-tabs__link">
           
   
   
@@ -495,11 +486,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../cdc/mysql/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -808,31 +801,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -845,7 +833,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Kubernetes
@@ -856,30 +844,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Commands
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../k8s/commands/" class="md-nav__link">
         
   
   
@@ -890,138 +858,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#for-completed-status-is-succeeded" class="md-nav__link">
-    <span class="md-ellipsis">
-      (for completed status is Succeeded)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#search-for-a-string-in-config-map" class="md-nav__link">
-    <span class="md-ellipsis">
-      Search for a string in config map
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-all-the-envs-set-while-masking-values-also-skips-some-servicek8s-related-envs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get all the envs set while masking values, also skips some service/k8s related envs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-pvc-usage-install-plugin-from-httpsgithubcomyashbhutwalakubectl-df-pv" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get PVC usage (install plugin from https://github.com/yashbhutwala/kubectl-df-pv)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-haproxy-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get HaProxy config
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#force-remove-nodes-stuck-in-notready-or-terminating-state" class="md-nav__link">
-    <span class="md-ellipsis">
-      Force remove nodes stuck in NotReady or Terminating state
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cordon-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cordon node
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#drain-a-particular-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      Drain a particular node
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-node-number-of-pods-in-them" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get node + number of pods in them
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-spark-application-status-counts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Spark application status counts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Get Spark application status counts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      example output:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-kafka-connect-logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get kafka connect logs
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1791,26 +1627,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" checked>
         
           
-          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="">
             
   
   
@@ -1823,7 +1664,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_15">
             <span class="md-nav__icon md-icon"></span>
             CDC
@@ -1834,10 +1675,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../cdc/mysql/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1848,6 +1696,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1860,7 +1709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cdc/postgresql.md" class="md-nav__link">
+      <a href="../postgresql.md" class="md-nav__link">
         
   
   
@@ -1901,128 +1750,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#for-completed-status-is-succeeded" class="md-nav__link">
-    <span class="md-ellipsis">
-      (for completed status is Succeeded)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#search-for-a-string-in-config-map" class="md-nav__link">
-    <span class="md-ellipsis">
-      Search for a string in config map
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-all-the-envs-set-while-masking-values-also-skips-some-servicek8s-related-envs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get all the envs set while masking values, also skips some service/k8s related envs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-pvc-usage-install-plugin-from-httpsgithubcomyashbhutwalakubectl-df-pv" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get PVC usage (install plugin from https://github.com/yashbhutwala/kubectl-df-pv)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-haproxy-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get HaProxy config
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#force-remove-nodes-stuck-in-notready-or-terminating-state" class="md-nav__link">
-    <span class="md-ellipsis">
-      Force remove nodes stuck in NotReady or Terminating state
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cordon-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cordon node
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#drain-a-particular-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      Drain a particular node
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-node-number-of-pods-in-them" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get node + number of pods in them
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-spark-application-status-counts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Spark application status counts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Get Spark application status counts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      example output:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-kafka-connect-logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get kafka connect logs
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2037,71 +1764,12 @@
 
 
 
-  <h1>Commands</h1>
+  <h1>MySQL</h1>
 
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>&lt;pod-name&gt;<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>--grace-period<span class="o">=</span><span class="m">0</span>
-</span></code></pre></div>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">amd64_nodes</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{range .items[?(@.status.nodeInfo.architecture==&quot;amd64&quot;)]}{.metadata.name}{&quot;\n&quot;}{end}&#39;</span><span class="k">)</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">for</span><span class="w"> </span>node<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$amd64_nodes</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Pods running on node: </span><span class="nv">$node</span><span class="s2">&quot;</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--all-namespaces<span class="w"> </span>--field-selector<span class="w"> </span>spec.nodeName<span class="o">=</span><span class="s2">&quot;</span><span class="nv">$node</span><span class="s2">&quot;</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">done</span>
-</span></code></pre></div>
-<p>Delete all failed pods in current namespace
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--field-selector<span class="o">=</span>status.phase<span class="o">=</span>Failed<span class="w"> </span>-o<span class="w"> </span>name<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-P<span class="w"> </span><span class="m">10</span><span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span>kubectl<span class="w"> </span>delete
-</span></code></pre></div></p>
-<p>Delete all failed pods across all namespaces</p>
-<h3 id="for-completed-status-is-succeeded">(for completed status is Succeeded)<a class="headerlink" href="#for-completed-status-is-succeeded" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--all-namespaces<span class="w"> </span>--field-selector<span class="o">=</span>status.phase<span class="o">=</span>Failed<span class="w"> </span>-o<span class="w"> </span>custom-columns<span class="o">=</span>NAME:.metadata.name,NAMESPACE:.metadata.namespace<span class="w"> </span>--no-headers<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>awk<span class="w"> </span><span class="s1">&#39;{print $2, $1}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>xargs<span class="w"> </span>-P<span class="w"> </span><span class="m">10</span><span class="w"> </span>-n<span class="w"> </span><span class="m">2</span><span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;kubectl delete pod $1 -n $0&#39;</span>
-</span></code></pre></div>
-<h3 id="search-for-a-string-in-config-map">Search for a string in config map<a class="headerlink" href="#search-for-a-string-in-config-map" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">for</span><span class="w"> </span>cm<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>configmap<span class="w"> </span>-o<span class="w"> </span>name<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w">   </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;--- Processing </span><span class="nv">$cm</span><span class="s2"> ---&quot;</span><span class="p">;</span><span class="w">   </span>kubectl<span class="w"> </span>get<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$cm</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span><span class="s1">&#39;test string&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Found &#39;AKIAYX2ZQI577ABR6GSM&#39; in </span><span class="nv">$cm</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
-</span></code></pre></div>
-<h3 id="get-all-the-envs-set-while-masking-values-also-skips-some-servicek8s-related-envs">Get all the envs set while masking values, also skips some service/k8s related envs<a class="headerlink" href="#get-all-the-envs-set-while-masking-values-also-skips-some-servicek8s-related-envs" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>kubectl<span class="w"> </span>-n<span class="w"> </span>super-crm-staging<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;pod-name&gt;<span class="w"> </span>--<span class="w"> </span>printenv<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;\r&#39;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-vE<span class="w"> </span><span class="s1">&#39;(_TCP_PROTO=|_TCP=|_PORT_HTTP=|_TCP_ADDR=|_TCP_PORT=|_HOST=|_PORT=)&#39;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/=.*/=****/&#39;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>sort
-</span></code></pre></div>
-<h3 id="get-pvc-usage-install-plugin-from-httpsgithubcomyashbhutwalakubectl-df-pv">Get PVC usage (install plugin from <a href="https://github.com/yashbhutwala/kubectl-df-pv">https://github.com/yashbhutwala/kubectl-df-pv</a>)<a class="headerlink" href="#get-pvc-usage-install-plugin-from-httpsgithubcomyashbhutwalakubectl-df-pv" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>kubectl<span class="w"> </span>df-pv<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;
-</span></code></pre></div>
-<h3 id="get-haproxy-config">Get HaProxy config<a class="headerlink" href="#get-haproxy-config" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-nhaproxy<span class="w"> </span>haproxy-ingress-kubernetes-ingress-7d8598b786-2zms2<span class="w"> </span>--<span class="w"> </span>cat<span class="w"> </span>/etc/haproxy/haproxy.cfg
-</span></code></pre></div>
-<h3 id="force-remove-nodes-stuck-in-notready-or-terminating-state">Force remove nodes stuck in NotReady or Terminating state<a class="headerlink" href="#force-remove-nodes-stuck-in-notready-or-terminating-state" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">for</span><span class="w"> </span>node<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>--no-headers<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;$2==&quot;NotReady&quot; || $2==&quot;Terminating&quot;{print $1}&#39;</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span>kubectl<span class="w"> </span>patch<span class="w"> </span>node<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$node</span><span class="s2">&quot;</span><span class="w"> </span>-p<span class="w"> </span><span class="s1">&#39;{&quot;metadata&quot;:{&quot;finalizers&quot;:[]}}&#39;</span><span class="w"> </span>--type<span class="o">=</span>merge
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">done</span>
-</span></code></pre></div>
-<h3 id="cordon-node">Cordon node<a class="headerlink" href="#cordon-node" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>kubectl<span class="w"> </span>cordon<span class="w"> </span>&lt;node-name&gt;
-</span></code></pre></div>
-<h3 id="drain-a-particular-node">Drain a particular node<a class="headerlink" href="#drain-a-particular-node" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>kubectl<span class="w"> </span>drain<span class="w"> </span>&lt;node-name&gt;<span class="w"> </span>--ignore-daemonsets<span class="w"> </span>--delete-emptydir-data
-</span></code></pre></div>
-<h3 id="get-node-number-of-pods-in-them">Get node + number of pods in them<a class="headerlink" href="#get-node-number-of-pods-in-them" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-A<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="s1">  [.items[] | .spec.nodeName] | group_by(.)[] |</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="s1">  &quot;\(.[0]) → \(. | length) pods&quot;</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="s1">&#39;</span>
-</span></code></pre></div>
-<h3 id="get-spark-application-status-counts">Get Spark application status counts<a class="headerlink" href="#get-spark-application-status-counts" title="Permanent link">&para;</a></h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>sparkapplication<span class="w"> </span>-n<span class="w"> </span>spark-apps<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>staging<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $2}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c
-</span></code></pre></div>
-<h4 id="example-output">example output:<a class="headerlink" href="#example-output" title="Permanent link">&para;</a></h4>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>   7 PENDING_RERUN
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a> 134 RUNNING
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>   1 SUBMISSION_FAILED
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>   1 SUBMITTED
-</span></code></pre></div>
-<h4 id="get-kafka-connect-logs">Get kafka connect logs<a class="headerlink" href="#get-kafka-connect-logs" title="Permanent link">&para;</a></h4>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>kubectl<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>-nkafka<span class="w"> </span>-l<span class="w"> </span>app.kubernetes.io/name<span class="o">=</span>kafka-connect
-</span></code></pre></div>
+<p>set these configs
+- binlog_format = ROW
+- binlog_row_image = FULL
+- binlog_backup = 1</p>
 
 
 
