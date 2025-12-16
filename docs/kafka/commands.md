@@ -12,6 +12,17 @@ echo "$TOPICS" | while read topic; do
 done
 ```
 
+### list topics
+```shell
+/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
+```
+
+
+### list consumer group
+```shell
+/opt/kafka/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
+```
+
 ### describe consumer group
 ```shell
 /opt/kafka/bin/kafka-consumer-groups.sh \
