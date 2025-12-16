@@ -1753,6 +1753,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#list-publications" class="md-nav__link">
+    <span class="md-ellipsis">
+      list publications
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-what-publication-is-attached-to-what-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      show what publication is attached to what tables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-if-wal-is-piling-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check if WAL is piling up
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-config-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      check config values
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1785,6 +1821,28 @@ max_wal_senders = 10 (or higher)</p>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span>restart_lsn,
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span>confirmed_flush_lsn
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>FROM<span class="w"> </span>pg_replication_slots<span class="p">;</span>
+</span></code></pre></div>
+<h3 id="list-publications">list publications<a class="headerlink" href="#list-publications" title="Permanent link">&para;</a></h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>SELECT<span class="w"> </span>pubname,<span class="w"> </span>puballtables
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>FROM<span class="w"> </span>pg_publication<span class="p">;</span>
+</span></code></pre></div>
+<h3 id="show-what-publication-is-attached-to-what-tables">show what publication is attached to what tables<a class="headerlink" href="#show-what-publication-is-attached-to-what-tables" title="Permanent link">&para;</a></h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>SELECT
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span>pubname,
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span>schemaname,
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span>tablename
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>FROM<span class="w"> </span>pg_publication_tables<span class="p">;</span>
+</span></code></pre></div>
+<h3 id="check-if-wal-is-piling-up">Check if WAL is piling up<a class="headerlink" href="#check-if-wal-is-piling-up" title="Permanent link">&para;</a></h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>SELECT
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span>slot_name,
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span>pg_size_pretty<span class="o">(</span>pg_wal_lsn_diff<span class="o">(</span>pg_current_wal_lsn<span class="o">()</span>,<span class="w"> </span>restart_lsn<span class="o">))</span><span class="w"> </span>AS<span class="w"> </span>retained_wal
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>FROM<span class="w"> </span>pg_replication_slots<span class="p">;</span>
+</span></code></pre></div>
+<h3 id="check-config-values">check config values<a class="headerlink" href="#check-config-values" title="Permanent link">&para;</a></h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>SHOW<span class="w"> </span>wal_level<span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>SHOW<span class="w"> </span>max_replication_slots<span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>SHOW<span class="w"> </span>max_wal_senders<span class="p">;</span>
 </span></code></pre></div>
 
 
