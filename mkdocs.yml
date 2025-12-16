@@ -87,6 +87,9 @@ nav:
       - Links: links/github.md
   - Kafka:
       - Commands: kafka/commands.md
+  - CDC:
+      - MySQL: cdc/mysql.md
+      - PostgreSQL: cdc/postgresql.md
 extra:
   social:
     - icon: fontawesome/brands/github
