@@ -46,3 +46,14 @@ SHOW wal_level;
 SHOW max_replication_slots;
 SHOW max_wal_senders;
 ```
+
+
+count rows in current db
+```sql
+SELECT 
+    schemaname,
+    relname as tablename,
+    n_tup_ins - n_tup_del as row_count
+FROM pg_stat_user_tables
+ORDER BY row_count DESC;
+```
