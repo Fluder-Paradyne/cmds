@@ -22,3 +22,19 @@ db.getCollectionInfos({ name: { $regex: '^' + prefix } }).forEach(function (c) {
     print(c.name + ": " + cnt);
 });
 ```
+
+substring check
+```js
+const substring = '2';
+
+const matchingCollections = db.getCollectionInfos({
+    name: {
+        $regex: substring
+    }
+});
+
+matchingCollections.forEach(collection => {
+    print(collection.name);
+});
+
+```
