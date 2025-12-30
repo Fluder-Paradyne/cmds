@@ -37,6 +37,8 @@ mvn test -Dtest=DebeziumEventDeserializationSchemaTest \
   -pl flink-cdc-connect/flink-cdc-source-connectors/flink-connector-debezium
 ```
 
+https://javadoc.io/doc/io.debezium/debezium-core/1.9.8.Final/io/debezium/time/ZonedTimestamp.html
+
 ### Build connector
 ```shell
 mvn clean package -pl flink-cdc-connect/flink-cdc-pipeline-connectors/flink-cdc-pipeline-connector-postgres -am -DskipTests
