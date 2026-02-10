@@ -69,3 +69,22 @@ done
 
 echo "Cleanup completed!"
 ```
+
+# Create UAT jobs
+## This script copies all the staging jobs and create a new uat jobs with changing the script to point to uat.jenkinsfile
+```shell
+rm -rf uat*
+
+for dir in staging*; do
+    new_name=$(echo "$dir" | sed 's/^staging/uat/')
+    
+    echo "Syncing: $dir -> $new_name"
+    
+    mkdir -p "$new_name"
+    
+    if [ -f "$dir/config.xml" ]; then
+        sed 's|<scriptPath>.*</scriptPath>|<scriptPath>jenkins/uat.Jenkinsfile</scriptPath>|' "$dir/config.xml" > "$new_name/config.xml"
+    fi
+done
+chown -R jenkins:jenkins uat*
+```
