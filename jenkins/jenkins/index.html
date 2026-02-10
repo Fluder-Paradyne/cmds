@@ -1860,6 +1860,23 @@
 </span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
 </span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Cleanup completed!&quot;</span>
 </span></code></pre></div>
+<h1 id="create-uat-jobs">Create UAT jobs<a class="headerlink" href="#create-uat-jobs" title="Permanent link">&para;</a></h1>
+<h2 id="this-script-copies-all-the-staging-jobs-and-create-a-new-uat-jobs-with-changing-the-script-to-point-to-uatjenkinsfile">This script copies all the staging jobs and create a new uat jobs with changing the script to point to uat.jenkinsfile<a class="headerlink" href="#this-script-copies-all-the-staging-jobs-and-create-a-new-uat-jobs-with-changing-the-script-to-point-to-uatjenkinsfile" title="Permanent link">&para;</a></h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span>uat*
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">for</span><span class="w"> </span>dir<span class="w"> </span><span class="k">in</span><span class="w"> </span>staging*<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nv">new_name</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/^staging/uat/&#39;</span><span class="k">)</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Syncing: </span><span class="nv">$dir</span><span class="s2"> -&gt; </span><span class="nv">$new_name</span><span class="s2">&quot;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$new_name</span><span class="s2">&quot;</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/config.xml&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">        </span>sed<span class="w"> </span><span class="s1">&#39;s|&lt;scriptPath&gt;.*&lt;/scriptPath&gt;|&lt;scriptPath&gt;jenkins/uat.Jenkinsfile&lt;/scriptPath&gt;|&#39;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$dir</span><span class="s2">/config.xml&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$new_name</span><span class="s2">/config.xml&quot;</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="k">fi</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="k">done</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>chown<span class="w"> </span>-R<span class="w"> </span>jenkins:jenkins<span class="w"> </span>uat*
+</span></code></pre></div>
 
 
 
