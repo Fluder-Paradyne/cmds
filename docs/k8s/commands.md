@@ -94,3 +94,19 @@ kubectl get sparkapplication -n spark-apps | grep staging | awk '{print $2}' | s
 ```shell
 kubectl logs -f -nkafka -l app.kubernetes.io/name=kafka-connect
 ```
+
+#### Get vpa recommendations
+```shell
+kubectl get vpa -n super-crm -o json | jq '[.items[] | {
+  name: .metadata.name,
+  namespace: .metadata.namespace,
+  targetRef: .spec.targetRef.name,
+  recommendations: [.status.recommendation.containerRecommendations[]? | {
+    container: .containerName,
+    targetCpu: .target.cpu,
+    targetMemory: .target.memory,
+    upperBoundCpu: .upperBound.cpu,
+    upperBoundMemory: .upperBound.memory
+  }]
+}]'
+```
