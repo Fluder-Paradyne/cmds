@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#query-to-see-which-indices-are-being-used-on-a-table-useful-to-figure-out-dropable-indices" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1710,6 +1715,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    MySQL
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1721,6 +1739,32 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#query-to-see-which-indices-are-being-used-on-a-table-useful-to-figure-out-dropable-indices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query to see which indices are being used on a table ( useful to figure out dropable indices )
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1775,6 +1819,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#query-to-see-which-indices-are-being-used-on-a-table-useful-to-figure-out-dropable-indices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query to see which indices are being used on a table ( useful to figure out dropable indices )
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1795,6 +1856,16 @@
 - binlog_format = ROW
 - binlog_row_image = FULL
 - binlog_backup = 1</p>
+<h3 id="query-to-see-which-indices-are-being-used-on-a-table-useful-to-figure-out-dropable-indices">Query to see which indices are being used on a table ( useful to figure out dropable indices  )<a class="headerlink" href="#query-to-see-which-indices-are-being-used-on-a-table-useful-to-figure-out-dropable-indices" title="Permanent link">&para;</a></h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">OBJECT_NAME</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39;Table&#39;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">INDEX_NAME</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39;Index&#39;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">COUNT_FETCH</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">COUNT_INSERT</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">COUNT_UPDATE</span><span class="w"> </span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">FROM</span><span class="w"> </span><span class="n">performance_schema</span><span class="p">.</span><span class="n">table_io_waits_summary_by_index_usage</span><span class="w"> </span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">OBJECT_NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&lt;table name&gt;&#39;</span><span class="p">;</span>
+</span></code></pre></div>
 
 
 
