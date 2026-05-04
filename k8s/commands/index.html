@@ -1022,6 +1022,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#good-way-to-copy-large-files-into-local-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good way to copy large files into local machine
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2057,6 +2066,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#good-way-to-copy-large-files-into-local-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good way to copy large files into local machine
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2156,6 +2174,11 @@
 </span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="s1">    upperBoundMemory: .upperBound.memory</span>
 </span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="s1">  }]</span>
 </span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="s1">}]&#39;</span>
+</span></code></pre></div>
+<h4 id="good-way-to-copy-large-files-into-local-machine">Good way to copy large files into local machine<a class="headerlink" href="#good-way-to-copy-large-files-into-local-machine" title="Permanent link">&para;</a></h4>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>kubectl<span class="w"> </span>-n<span class="w"> </span>mongodb<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>crm-psmdb-db-rs0-1<span class="w"> </span>--<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span>tar<span class="w"> </span>-czf<span class="w"> </span>-<span class="w"> </span>-C<span class="w"> </span>/tmp<span class="w"> </span>mongo-dump<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>pv<span class="w"> </span>&gt;<span class="w"> </span>~/Downloads/mongo-dump.tar.gz
 </span></code></pre></div>
 
 
