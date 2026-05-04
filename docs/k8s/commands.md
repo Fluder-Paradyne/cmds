@@ -110,3 +110,10 @@ kubectl get vpa -n super-crm -o json | jq '[.items[] | {
   }]
 }]'
 ```
+
+#### Good way to copy large files into local machine
+```shell
+kubectl -n mongodb exec crm-psmdb-db-rs0-1 -- \
+  tar -czf - -C /tmp mongo-dump \
+  | pv > ~/Downloads/mongo-dump.tar.gz
+```
