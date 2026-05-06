@@ -38,3 +38,7 @@ matchingCollections.forEach(collection => {
 });
 
 ```
+
+
+### percona operator CRD spec
+https://docs.percona.com/percona-operator-for-mongodb/operator.html
